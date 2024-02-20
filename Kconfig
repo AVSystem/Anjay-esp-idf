@@ -1,4 +1,4 @@
-# Copyright 2023 AVSystem <avsystem@avsystem.com>
+# Copyright 2023-2024 AVSystem <avsystem@avsystem.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -337,6 +337,10 @@ config ANJAY_WITH_MODULE_ADVANCED_FW_UPDATE
 config ANJAY_WITHOUT_MODULE_FW_UPDATE_PUSH_MODE
     bool "Disable support for PUSH mode Firmware Update."
     depends on ANJAY_WITH_MODULE_FW_UPDATE
+
+config ANJAY_WITH_MODULE_SW_MGMT
+    bool "Enable sw_mgmt module (implementation of the Software Management object)"
+    default n
 
 config ANJAY_WITH_MODULE_IPSO_OBJECTS
     bool "Enable IPSO objects implementation"

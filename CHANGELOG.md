@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.7.0 (February 20th, 2024)
+
+### Features
+ - Updated Anjay version, updated configuration files
+
 ## 23.11 (November 21st, 2023)
 
 ### Features
