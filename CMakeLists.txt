@@ -57,3 +57,5 @@ endif()
 # the maximum hardware-imposed alignment on ESP32 is actually 4 bytes.
 # We disable assertions within anjay to work around that.
 target_compile_definitions(${COMPONENT_TARGET} PRIVATE "NDEBUG")
+
+target_compile_options(${COMPONENT_LIB} PRIVATE -Wno-error=maybe-uninitialized)

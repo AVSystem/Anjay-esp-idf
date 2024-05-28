@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.8.0 (May 28th, 2024)
+
+### Improvements
+ - maybe-uninitialized warning not treated as error to enable debug
+   optimization
+
 ## 3.7.0 (February 20th, 2024)
 
 ### Features
@@ -14,4 +20,3 @@
 
 ### Features
  - Initialized repository with `Anjay` and `FreeRTOS-Cellular-Interface` submodules
- 
