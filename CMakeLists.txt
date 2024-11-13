@@ -29,7 +29,10 @@ idf_component_register(SRCS
                            "deps/anjay/deps/avs_coap/src"
                            "deps/anjay/deps/avs_commons/src"
                        PRIV_REQUIRES
-                           idf::mbedtls)
+                           idf::mbedtls
+                       REQUIRES
+                           esp_driver_uart
+                           esp_driver_gpio)
 
 if (CONFIG_ANJAY_ESP_IDF_WITH_BG96_SUPPORT)
     file(GLOB_RECURSE FREERTOS_CELLULAR_LIBRARY_SOURCES
@@ -47,6 +50,8 @@ if (CONFIG_ANJAY_ESP_IDF_WITH_BG96_SUPPORT)
                              "deps/FreeRTOS-Cellular-Interface/source/cellular_network_transport"
                              "deps/FreeRTOS-Cellular-Interface/source/interface"
                              "deps/FreeRTOS-Cellular-Interface/modules")
+    # Ignoring warnings in FreeRTOS-Cellular-Interface
+    target_compile_options(freertos_cellular_library PRIVATE -Wno-format -Wno-incompatible-pointer-types)
     target_link_libraries(freertos_cellular_library PRIVATE ${COMPONENT_LIB})
 endif()
 
@@ -58,4 +63,5 @@ endif()
 # We disable assertions within anjay to work around that.
 target_compile_definitions(${COMPONENT_TARGET} PRIVATE "NDEBUG")
 
+# maybe-uninitialized warning not treated as error to enable debug optimization
 target_compile_options(${COMPONENT_LIB} PRIVATE -Wno-error=maybe-uninitialized)
