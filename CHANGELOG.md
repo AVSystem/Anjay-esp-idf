@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.9.0 (Feb 28th, 2024)
+
+### Improvements
+ - Updated Anjay to 3.9.0
+
 ## 3.8.1 (Nov 13th, 2024)
 
 ### Improvements
