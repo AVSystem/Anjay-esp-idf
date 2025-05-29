@@ -1,6 +1,13 @@
 # Changelog
 
-## 3.9.0 (Feb 28th, 2024)
+## 3.10.0 (May 29th, 2025)
+
+### Discontinued the project
+
+### Improvements
+ - Updated Anjay to 3.10.0 and the licenses NOTICE file
+
+## 3.9.0 (Feb 28th, 2025)
 
 ### Improvements
  - Updated Anjay to 3.9.0
